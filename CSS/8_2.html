@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+    background-color: #c7e63c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .heading-container {
+    perspective: 1000px;
+    text-align: center;
+  }
+  .gradient-text {
+    font-size: 3em;
+    background: linear-gradient(45deg, #5ec1ff, #FF99AA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: rotateY(30deg) rotateX(20deg);
+    animation: rotateAnimation 10s infinite linear;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotateY(30deg) rotateX(20deg);
+    }
+    100% {
+      transform: rotateY(360deg) rotateX(380deg);
+    }
+  }
+    </style>
+</head>
+<body>
+    <div class="heading-container">
+        <h1 class="gradient-text">HARSH</h1>
+      </div>
+</body>
+</html>

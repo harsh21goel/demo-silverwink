@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset default margin and padding */
+body, figure, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.styled-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.styled-checkbox,
+.styled-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.styled-checkbox + label,
+.styled-radio + label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+.styled-checkbox + label::before,
+.styled-radio + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.styled-checkbox:checked + label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.styled-radio + label::before {
+  border-radius: 50%;
+}
+
+.styled-radio:checked + label::before {
+  content: "\2022"; /* Bullet character */
+  font-size: 18px;
+  line-height: 18px;
+  color: #007bff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+    </style>
+</head>
+<body>
+    <form class="styled-form">
+        <div class="form-group">
+          <input type="checkbox" id="checkbox1" class="styled-checkbox">
+          <label for="checkbox1">Checkbox Option 1</label>
+        </div>
+        <div class="form-group">
+          <input type="radio" id="radio1" name="radio-group" class="styled-radio">
+          <label for="radio1">Radio Option 1</label>
+        </div>
+        <div class="form-group">
+          <input type="radio" id="radio2" name="radio-group" class="styled-radio">
+          <label for="radio2">Radio Option 2</label>
+        </div>
+      </form>
+</body>
+</html>

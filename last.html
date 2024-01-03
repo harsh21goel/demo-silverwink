@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="jqueryUI/jquery-ui.min.css">
+    <link rel="stylesheet" href="cssletteranimation/cssanimation.min.css">
+    <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* position: relative; */
+        }
+
+        header {
+            height: 600px;
+
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 83%);
+            background-image: url(work.jpg);
+            background-position: center;
+            overflow-y: hidden;
+            /* background-color: blue; */
+        }
+
+       
+        .photos {
+            /* background-color: red; */
+            visibility: visible;
+        }
+
+        .nav-link {
+            color: #FFF;
+            font-weight: 200;
+        }
+
+        #font {
+            color: blue;
+            /* font-weight: bold; */
+        }
+
+        #big {
+            font-size: 40px;
+            font-weight: bold;
+            color: #FFF;
+            /* line-height: 60px; */
+        }
+
+        #small {
+            font-size: 15px;
+            color: #FFF;
+        }
+
+        .first {
+            height: 500px;
+            /* background-color: aqua; */
+        }
+
+        .a {
+            width: 200px;
+            height: 320px;
+        }
+
+        .b {
+            width: 250px;
+            height: 450px;
+        }
+
+        .c {
+            width: 200px;
+            height: 320px;
+        }
+
+        .a img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .b img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .c img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #more {
+            color: #FFF;
+            /* padding-left: 10px; */
+        }
+        .bigger:hover{
+            transition: all linear 0.3s;
+            transform: scale(1.4);
+        }
+        .clip {
+            width: 100%;
+            height: 500px;
+            background-color: blue;
+            position: relative;
+            clip-path: polygon(0 0, 100% 14%, 100% 86%, 0 100%);
+        }
+
+        .im {
+            width: 100%;
+            height: 500px;
+            /* background-color: red; */
+        }
+        footer{
+            position: relative;
+        }
+        .im img {
+            width: 80%;
+            height: 100%;
+        }
+        .fonts{
+            font-size: 65px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #num{
+            font-size: 30px;
+            color: blue;
+        }
+        #pro{
+            font-size: 16px;
+            /* line-height: 0px; */
+            color: blue;
+        }
+        /* .circle{
+            height:100%;
+            width:50%;
+            position: absolute;
+            right:0px;
+            border-top-left-radius: 70px;
+             border-bottom-left-radius: 70px;
+            background-color: white;
+        } */
+        #four{
+            /* margin-top: 60px; */
+            /* position: relative;
+            top:80px; */
+            /* width:100%; */
+            height:500px;
+            display: flex;
+            align-items: center;
+            /* background-color: orange; */
+        }
+        .bend{
+            border-radius: 20px;
+        }
+        .some{
+            height:120px;
+            /* background-color: red; */
+        }
+       .items{
+        width:100%;
+        height:540px;
+        /* background-color: red; */
+       }
+       .ima{
+        width:100%;
+        height:350px;
+       }
+       .ima img{
+        height:100%;
+        width:100%;
+       }
+         .it img{
+                width:70%;
+                height:70%;
+            }
+         .car{
+            width:100%;
+            height:350px;
+            /* background-color: red; */
+         } 
+         .stars{
+            font-size: 40px;
+
+         }
+         /* .stars:hover{
+            color: yellow;
+         }  */
+         .colors{
+            color:blue;
+         }
+         .hovers{
+            transition: all linear 0.4s;
+         }
+         .hovers:hover{
+            
+            z-index: 1;
+            transform: scale(1.4) rotate(360deg);
+         } 
+         .end{
+            width:100%;
+            height:300px;
+            background-color:lightblue;
+            display: flex;
+            align-items: end;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+         }
+         .end ul{
+            list-style: none;
+            padding: 0%;
+         }
+         .end ul li{
+            /* list-style: none; */
+            padding-top:5px;
+         }
+         #blue{
+            color:blue;
+         }
+         #fn{
+            font-size: 30px;
+            color: blue;
+         }
+         .add{
+            color: yellow;
+         }
+         .contact{
+            width:50%;
+            height:110px;
+            background-color:rgb(32, 32, 87);
+            position: absolute;
+            bottom:220px;
+            left:360px;
+            display: none;
+            /* margin: auto; */
+            border-radius: 20px;
+            /* margin: auto; */
+         }
+         #s{
+            border: none;
+            outline: none;
+            border-radius: 10px;
+         }
+         #t{
+            border-radius: 20px;
+            width:25%;
+         }
+         .k{
+            border-radius: 20px;
+         }
+         @media(min-width:200px) and (max-width:400px) {
+            header{
+                clip-path: none;
+            }
+         }
+        @media(min-width:200px) and (max-width:790px) {
+            .photos {
+                visibility: hidden;
+
+            }
+            .car{
+            height:600px;
+            }
+            .contact{
+            width:90%;
+            height:200px;
+            text-align: center;
+            background-color:rgb(32, 32, 87);
+            position: absolute;
+            bottom:220px;
+            left:20px;
+            display: none;
+            /* margin: auto; */
+            border-radius: 20px;
+            
+         }
+            #four{
+                height:700px;
+                /* background-color: red; */
+                /* justify-content: flex-start; */
+                align-items: flex-start;
+            }
+            .it img{
+                width:60%;
+                height:70%;
+            }
+            .items{
+                height:1900px;
+            }
+        }
+        @media(min-width:428px) and (max-width:450px) {
+            .items{
+                height: 1980px;
+            }
+
+        }
+        @media(min-width:800px) and (max-width:1080px) {
+            header {
+                height: 900px;
+                
+            }
+            .contact{
+            width:80%;
+            height:110px;
+            background-color:rgb(32, 32, 87);
+            position: absolute;
+            bottom:220px;
+            left:100px;
+            /* margin: auto; */
+            border-radius: 20px;
+            
+         }
+            .it img{
+                width:80%;
+                height:50%;
+            }
+        }
+        @media(min-width:200px) and (max-width:600px) {
+            .clip {
+            width: 100%;
+            height: 250px;
+            background-color: blue;
+            position: relative;
+            clip-path: polygon(0 0, 100% 14%, 100% 86%, 0 100%);
+        }
+
+        .im {
+            width: 100%;
+            height: 250px;
+            /* background-color: red; */
+        }
+        }
+        @media(min-width:800px) and (max-width:1080px) {
+            .clip {
+            width: 100%;
+            height: 350px;
+            background-color: blue;
+            position: relative;
+            clip-path: polygon(0 0, 100% 14%, 100% 86%, 0 100%);
+        }
+
+        .im {
+            width: 80%;
+            height: 350px;
+            /* background-color: red; */
+        }
+        .ima{
+            height:300px;
+        }
+        .car{
+            height:303px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  aman">
+            <div class="container-fluid mx-4">
+                <a class="navbar-brand" href="#">
+                    <i id="font" class="fa fa-home"></i><span id="font"> Apps</span> Market
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item px-4">
+                            <a class="nav-link " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Services Us</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" href="#">Why us</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" href="#">Our Goals</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" href="#">Our Portfolio</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" href="#">Our Client</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div> hovers
+        </nav>
+        <div class="container-fluid first">
+            <div class="row h-100 d-flex align-items-center ">
+                <div class="col-xl-5 col-sm-12 col-lg-6">
+                    <div class="card mb-3 w-100 bg-transparent border-0">
+                        <div class="card-body ">
+                            <h5 class="card-title "><span id="big">We Create Application With Excellent Technology</span>
+                            </h5>
+                            <p class="card-text"><span id="small" >With supporting text below as a natural lead-in to
+                                    additional content
+                                    text below as a natural lead-in to additional contenttext below as a natural lead-in
+                                    to
+                                    additional content lead-in to additional contenttext below as a natural lead-in to
+                                    additional content lead-in to additional contenttext below as a natural lead-in to
+                                    additional content.</span></p>
+                            <a href="#" class="btn btn-primary">Download now</a>
+                            <a href="#" class="btn " id="more">Explore more <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7  col-md-12 d-flex align-items-baseline justify-content-center gap-3 photos">
+                    <div class="a"><img src="smartp.png" alt=""></div>
+                    <div class="b"><img src="smartp.png" alt=""></div>
+                    <div class="c"><img src="smartp.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="second">
+        <div class="container-fluid  ">
+            <div class="col-12 mx-sm-1 mt-5 text-center ">
+                <h1 class="fw-bold">We provides various kind of services for you</h1>
+            </div>
+            <div class="col-12 mx-sm-1 text-center  ">It is along established fact that a user will be distracted by the
+                readeable<br>content of a page when looking at its layout the point of using lorem</div>
+            <div class="row  row-cols-1 row-cols-md-3 g-4 mt-2 mx-lg-4  ">
+                <a href="#">
+                <div class="col">
+                    <div class="card w-100 hovers ">
+                        <img src="mob.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fw-bold">Unique App ui</h5>
+                            <p class="card-text text-center">It is along established fact that a user will be distracted
+                                by the readeable content of a page</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+                <a href="#">
+                <div class="col ">
+                    <div class="card w-100 hovers ">
+                        <img src="mob.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fw-bold">Excellent Dashboard</h5>
+                            <p class="card-text text-center">It is along established fact that a user will be distracted
+                                by the readeable content of a page.</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+                <a href="#">
+                <div class="col">
+                    <div class="card w-100 hovers">
+                        <img src="mob.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fw-bold">By Construction</h5>
+                            <p class="card-text text-center">It is along established fact that a user will be distracted
+                                by the readeable content of a page</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="third">
+        <div class="container-fluid">
+            <div class="col-12 mx-sm-1 mt-5 text-center ">
+                <h1 class="fw-bold">Why Us</h1>
+            </div>
+            <div class="col-12 mx-sm-1 text-center  ">It is along established fact that a user will be distracted by the
+                readeable<br>content of a page when looking at its layout the point of using lorem</div>
+            <div class="row  mt-5">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-5 p-0 ">
+                            <div class="clip"></div>
+                        </div>
+                        <div class="col-6  p-0">
+                            <div class="im"><img src="smartp.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 p-0 d-flex align-items-center">
+                    <div class="card bg-transparent border-0 mb-3" style="width: 34rem;">
+                        <div class="card-body">
+                            <h2 class="card-title fw-bold">Built the app that<br>everyone love</h2>
+                            <p class="card-text" >It is along established fact that a user will be distracted by the
+                                readeable content of a page when looking at its layout the point of using lorem is that
+                                it has a more or less normal distribution of letter <br><br>It is along established fact
+                                that a user will be distracted by the
+                                readeable content of a page when looking at its layout the point of using
+                            </p>
+                            <a href="#" class="btn btn-lg btn-outline-primary">Get More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="four">
+        <div class="container-fluid  mt-5">
+            <div class="col-12 mx-sm-1  text-center ">
+                <h1 class="fw-bold">We Completed 1200+ Projects Yearly<br> Successfully $Counting</h1>
+                <div class="col-12 mx-sm-1 text-center mt-2 ">It is along established fact that a user will be distracted by the
+                    readeable<br>It is along established fact that</div>
+                    <div class="some container-fluid">
+                    <div class="row  h-100 d-flex justify-content-evenly gap-5 mt-5">
+                        <div class="col-md-2 col-7  bend ">
+                        <div class="row  h-100 d-flex align-items-center">
+                            <div class="col-4 p-0 d-flex  justify-content-end"><a href="#"><i class="fa fa-user-circle fonts" ></i></a></div>
+                            <div class="col-8 p-0 text-start"><a href="#"><span id="num">100+</span><span id="pro"><br>Projects Complete</span></a></div>
+                        </div>
+                        </div>
+                        <div class="col-md-2 col-7 bend">
+                            <div class="row  h-100 d-flex align-items-center">
+                                <div class="col-4 p-0 d-flex  justify-content-end"><a href="#"><i class="fa fa-user-circle fonts" ></i></a></div>
+                                <div class="col-8 p-0 text-start"><a href="#"><span id="num">100+</span><span id="pro"><br> Active Projects</span></a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-7 bend">
+                            <div class="row  h-100 d-flex align-items-center">
+                                <div class="col-4 p-0 d-flex  justify-content-end"><a href="#"><i class="fa fa-user-friends fonts" ></i></a></div>
+                                <div class="col-8 p-0 text-start"><a href="#"><span id="num">90+</span><span id="pro"><br>Clients satisfied</span></a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-7 bend">
+                            <div class="row  h-100 d-flex align-items-center">
+                                <div class="col-4 p-0 d-flex  justify-content-end"><a href="#"><i class="fa fa-user-friends fonts" ></i></a></div>
+                                <div class="col-8 p-0 text-start"><a href="#"><span id="num">56+</span><span id="pro"><br>Country Available</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="five">
+        <div class="container-fluid mt-5">
+            <div class="col-12 mx-sm-1 mt-5 text-center ">
+                <h1 class="fw-bold">Our Portfolio</h1>
+            </div>
+            <div class="col-12 mx-sm-1 text-center  ">It is along established fact that a user will be distracted by the
+                readeable<br>content of a page when looking at its layout the point of using lorem</div>
+             <div class="items ">
+                <div class="row h-100 ">
+                    <a href="#" class="col-md-3 col-12 p-0 d-flex align-items-center justify-content-center it bigger "><img src="smartp.png" alt=""></a>
+                    <a href="#" class="col-md-3 col-12 p-0 it d-flex align-items-center justify-content-center bigger "> <img src="smartp.png" alt=""></a>
+                    <a href="#" class="col-md-3 col-12 p-0 it d-flex align-items-center justify-content-center bigger "><img src="smartp.png" alt=""></a>
+                    <a href="#" class="col-md-3 col-12 p-0 it d-flex align-items-center justify-content-center bigger"><img src="smartp.png" alt=""></a>
+                   </a>
+                </div>
+               
+             </div>
+        </div>
+    </section>
+     <section id="six">
+        <div class="container-fluid ">
+            <div class="row  mt-lg-5 mt-5">
+                <div class="col-10 col-md-9 col-lg-10">
+                    <div class=" col-lg-10 col-12 mx-sm-1 mx-lg-5  text-start ">
+                        <h1 class="fw-bold">Our Clients Feedback</h1>
+                    </div>
+                    <div class=" col-lg-10 col-12 mx-sm-1 text-start mx-lg-5  ">It is along established fact that a user will be distracted by the
+                        readeable<br>content of a page when looking at its layout the point of using lorem</div> 
+                </div>
+               <div class="col-md-3 col-lg-2 mt-3 mt-md-0 col-12 d-flex align-items-center justify-content-md-end justify-content-lg-start"> <a href="#" class="btn btn-primary btn-lg">Read more <i class="fa fa-arrow-right"></i></a> </div>
+            </div>
+           <div class="car mt-4">
+            <div class="row h-100">
+                <div class="col-12">
+                    <div class="card mx-lg-5 h-100 ">
+                        <div class="row g-0">
+                          <div class="col-md-4 p-0">
+                            <div class="ima"><img src="gir.jpg" class="card-img-top" alt="..."></div>
+                          </div>
+                          <div class="col-md-8   d-flex align-items-center ">
+                            <div class="card-body mx-md-5 d-flex align-items-center flex-column text-center text-lg-start align-items-lg-start">
+                              <h5 class="card-title d-flex gap-3 "><i class="fa fa-star stars s1"></i><i class="fa fa-star stars s2"></i><i class="fa fa-star stars s3"></i><i class="fa fa-star stars s4"></i><i class="fa fa-star stars s5"></i></h5>
+                              <p class="card-text mt-4 colors">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id est suscipit quis autem <br>beatae nulla fugit voluptate excepturi ullam voluptas.</p>
+                              <p class="card-text "><small class="text-body-secondary "><span class="colors">Harsh goel</span></small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+           </div>
+        </div>
+
+    </section>
+    <footer >
+        <div class="contact ">
+            <div class="row  w-100 m-0  p-0 h-100 d-flex align-items-center  justify-content-center">
+            <div class="col-12 col-md-6 "><span style="color:#FFF; font-weight: bold; font-size: 20px;">Contact Us!</span><br><span style="color: #FFF;">There are amny variteis of lorem ipsum but the majority has suffered iterations</span></div>
+            <div class="col-11 col-md-5 bg-white p-1  k d-flex justify-content-between "><input  type="text" name="" id="s" placeholder="Email-here"><input class="btn btn-primary" type="submit" value="Send" id="t"></div>
+            </div>
+        </div>
+       
+        <div class="end mt-5">
+           
+        <div class="container-fluid  ">
+            <div class="row  mx-lg-5 mx-2">
+                <div class="col-12 d-flex col-md-3 align-items-center  justify-content-md-start justify-content-center mb-3 mb-md-0 gap-3"><a href="#"><i id="fn" class="fab fa-facebook"></i></a><a href="#"><i id="fn" class="fab fa-twitter"></i></a><a href="#"><i id="fn" class="fab fa-instagram"></i></a><a href="#"><i id="fn" class="fab fa-whatsapp"></i></a> </div>
+                <div class="col-4 col-md-3  "><span id="blue" class="fw-bold">Links</span> <ul class="mt-3"><li><a href="#">Home</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Service</a></li></ul></div>
+                <div class="col-4 col-md-3 "><span id="blue" class="fw-bold">Support</span> <ul class="mt-3"><li><a href="#">FAQ</a></li>
+                    <li><a href="#">How it</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Reporting</a></li></ul></div>
+                <div class="col-4 col-md-3"><span id="blue" class="fw-bold co">Contact us</span> <ul class="mt-3"><li><a href="#">+4253465667</a></li>
+                    <li><a href="#">@gmail.com</a></li>
+                    <li><a href="#">Muzzafarnagar</a></li></div>
+            </div>
+        </div>
+        </div>
+    </footer>
+   
+    <script src="CSS/code.jquery.com_jquery-3.7.0.min.js"></script>
+
+    <script src="jqueryUI/jquery-ui.min.js"></script>
+    <script src="cssletteranimation/letteranimation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+           $(".co").click(function(){
+            $(".contact").fadeToggle();
+           })
+           $(".s1").click(function(){
+                $(".s1").toggleClass("add");
+           })
+           $(".s2").click(function(){
+                $(".s2").toggleClass("add");
+           })
+           $(".s3").click(function(){
+                $(".s3").toggleClass("add");
+           })
+           $(".s4").click(function(){
+                $(".s4").toggleClass("add");
+           })
+           $(".s5").click(function(){
+                $(".s5").toggleClass("add");
+           })
+        })
+    </script>
+</body>
+
+</html>

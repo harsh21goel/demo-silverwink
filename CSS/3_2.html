@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        /* padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center; */
+    }
+    .grid-container{
+        /* width: 600px;
+        height: 400px; */
+        display: grid;
+        grid-template-columns: auto auto auto;
+  
+padding: 10px;
+justify-content: center;
+    }
+    .item{
+        /* background: #000; */
+        width: 100%;
+        padding: 100px;
+        box-sizing: border-box;
+        border: 2px solid black;
+        background: url(https://media.istockphoto.com/id/1162040662/vector/vector-superhero-silhouette-with-sunburst-effect-background.jpg?s=612x612&w=0&k=20&c=NyvKS97BiIyoZ4Z75Sd7Iptc9BTckQQNep91MGhuRmo=);
+        background-position: center;
+    }
+    @media  (min-width:300px) and (max-width:450px) {
+        .item{
+            padding:60px;
+            /* background-color: #000; */
+        }
+    }
+    @media  (min-width:450px) and (max-width:600px) {
+        .item{
+            padding:72px;
+            /* background-color: #000; */
+        }
+    }
+
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            width:100%;
+            height:auto;
+            background-color: #000;
+            display: flex;
+            position: relative;
+        }
+        .logo{
+            width:30%;
+            height:60px;
+            /* background-color:green; */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 25px;
+            font-weight: bold;
+            gap:10px;
+            color: #FFF;
+        }
+        .image{
+            width:20%;
+            height: 100%;
+            /* background-color: green; */
+        }
+        .image img{
+            width: 100%;
+            height: 100%;
+        }
+        .list{
+            width:50%;
+            height:60px;
+            /* background-color: brown; */
+            display: block;
+            /* position: relative; */
+        }
+        .list ul{
+            margin: 0;
+            padding: 0%;
+            height: 60px;
+            list-style: none;
+            display: flex;
+            gap:60px;
+            color: #FFF;
+            /* background-color: palegreen; */
+            align-items: center;
+            justify-content: center;
+            width:100%;
+            font-size: 20px;
+            /* position: absolute; */
+            right:0px;
+        }
+        /* .list ul li{
+            height:60px;
+            width:40px;
+        }  */
+        .box{
+        width:30px;
+        height:30px;
+        background-color: #302c2c;
+        padding:10px;
+        cursor: pointer;
+        position: absolute;
+        border-radius: 5px;
+        top:13px;
+        right:10px;
+        display: none;
+        transition: all ease 0.3s;
+    }
+   
+    .box .line{
+        width: 100%;
+        height:3px;
+        background-color: #FFF;
+        position: relative;
+        top:14px;
+        transition: all ease 0.3s;
+    }
+    .box .line::after{
+        content:"";
+        width:100%;
+        height:3px;
+        background-color: #FFF;
+        position: absolute;
+        top:13px;
+        transition: all ease 0.3s;
+    }
+    .box .line::before{
+        content:"";
+        width:100%;
+        height:3px;
+        background-color: #FFF;
+        position: absolute;
+        top:-13px;
+        transition: all ease 0.3s;
+    }
+    .box .active{
+        background: transparent;
+    }
+     .box .active::after{
+        top:0px;
+        transform: rotate(135deg);
+    }
+    .box .active::before{
+        top:0px;
+        transform: rotate(-135deg);
+    }
+    .Feedback{
+        width:20%;
+        height:60px;
+        background-color:#000;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .Feedback button{
+        width:40%;
+        height:35px;
+        background-color:red;
+        color: #FFF;
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+    }
+    
+        @media (min-width:856px) and (max-width:1106px){
+            .list{
+                /* position: relative; */
+                width:70%;
+            }
+            
+            .Feedback{
+                display: none;
+            }
+        } 
+    @media (min-width:200px) and (max-width:730px){
+        .image{
+            width:20%;
+        }
+    }
+    @media (min-width:200px) and (max-width:848px){
+        .nav{
+            flex-direction: column;
+        }
+        
+        .logo{
+            width:100%;
+            /* justify-content: flex-start; */
+            /* background-color: yellow; */
+        }
+        .Feedback{
+            display: none;
+        }
+        .list{
+            width:100%;
+            height:auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           display: none;
+
+        }
+        .list ul{
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+           background-color: yellow;
+           text-align: center;
+           gap:2px;
+           padding: 0%;
+        }
+        .list ul li{
+            width:100%;
+            line-height: 40px;
+            text-align: center;
+            /* display: block; */
+            height:40px;
+            background-color: brown;
+        }
+        .box{
+            display:block;
+        }
+    }
+    @media (min-width:848px) and (max-width:930px){
+        .list ul{
+            width:auto;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="box1">
+    <div class="nav">
+        <div class="logo"><div class="image"><img src="./Jquery/comlogo2.png" alt=""></div>COMPANY</div>
+        <div class="list">
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contact </li>
+                <li>Login</li>
+                <li>Signup</li>
+            </ul>
+        </div>
+        <div class="Feedback"><Button>Feedback</Button></div>
+    </div>
+    <div class="box">
+        <div class="line"></div>
+    </div>
+    </div>
+    <script src="code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".box").click(function(){
+                $(".list").slideToggle();
+                $(".line").toggleClass("active");
+            })
+        })
+    </script>
+</body>
+</html>
