@@ -1,2 +1,2 @@
-# demo-solverwink
+# demo-silverwink
 Practice
